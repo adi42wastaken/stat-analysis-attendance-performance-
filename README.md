@@ -7,6 +7,7 @@
 - "midsem" by real marks(out of 100)
 - "quiz" by average of all the quizzes (out of 100)
 - make sure code can read the path of .csv file and run the program.
+- Note the student_id don't really affect our data/code so, it won't be necessary to change that, although we can if we want
 
 
 **How it works**
