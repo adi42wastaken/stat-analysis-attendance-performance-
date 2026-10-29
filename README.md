@@ -1,4 +1,13 @@
-# This C program analyzes the relationship between student attendance and academic marks using data from a CSV file. It can analyze mid-semester marks, quiz marks, or both.
+## This C program analyzes the relationship between student attendance and academic marks using data from a CSV file. It can analyze mid-semester marks, quiz marks, or both.
+
+
+### How to run
+- Clone the repo(just one code and .csv file)
+- Replace "attendance" by real attendance of students(out of 100)
+- "midsem" by real marks(out of 100)
+- "quiz" by average of all the quizzes (out of 100)
+- make sure code can read the path of .csv file and run the program.
+
 
 **How it works**
 
@@ -10,4 +19,5 @@ Compares attendance groups: Uses a 75% attendance cut-off to compare marks for s
 Generates output: Displays results on screen and can save a text report, scatter plot, histogram, and correlation heatmap. The graphs are written as SVG files that can be opened in a web browser.
 
 **Overall purpose**
+
 The program helps explore whether attendance and marks tend to vary together in the dataset. Its results describe relationships, not proof that attendance causes higher or lower marks; other factors may also affect performance.
