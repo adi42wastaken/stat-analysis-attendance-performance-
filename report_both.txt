@@ -1,0 +1,76 @@
+ATTENDANCE vs ACADEMIC PERFORMANCE - ANALYSIS REPORT
+Marks analysed: Mid-sem + Quiz (both)
+====================================================
+
+=== DESCRIPTIVE STATISTICS (n = 60, marks: Mid-sem + Quiz (both)) ===
+             Attendance      Mid-sem         Quiz
+Mean              77.54        75.44        59.43
+Median            78.75        79.70        59.05
+Std Dev           14.89        14.07        11.06
+Minimum           43.90        43.50        34.10
+Maximum          100.00       100.00        83.20
+
+=== CORRELATION ANALYSIS (marks: Mid-sem + Quiz (both)) ===
+
+--- Attendance vs Mid-sem ---
+Pearson  r   = 0.7718
+Spearman rho = 0.7651  (rank based, less affected by outliers)
+t statistic = 9.2425, df = 58, p-value = < 0.0001
+Interpretation: a strong positive correlation. Statistically significant at the 5% level.
+
+--- Attendance vs Quiz ---
+Pearson  r   = 0.3929
+Spearman rho = 0.4067  (rank based, less affected by outliers)
+t statistic = 3.2537, df = 58, p-value = 0.0019
+Interpretation: a weak positive correlation. Statistically significant at the 5% level.
+
+Note: correlation does not prove that attendance CAUSES better marks;
+other factors (study habits, ability, motivation) may be involved.
+
+=== CORRELATION MATRIX (Pearson r, marks: Mid-sem + Quiz (both)) ===
+               Attendance      Mid-sem         Quiz
+Attendance         1.0000       0.7718       0.3929
+Mid-sem            0.7718       1.0000       0.4884
+Quiz               0.3929       0.4884       1.0000
+(+1 = perfect positive, 0 = no linear relation, -1 = perfect negative)
+
+=== LINEAR REGRESSION (marks: Mid-sem + Quiz (both)) ===
+
+--- Mid-sem = a + b * Attendance ---
+Mid-sem = 18.9084 + 0.7291 * Attendance
+R-squared = 0.5956
+Each extra 1% of attendance is associated with +0.729 Mid-sem marks; attendance explains 59.6% of the variation.
+Predictions:
+  Attendance  50.0%  ->  predicted Mid-sem 55.4
+  Attendance  60.0%  ->  predicted Mid-sem 62.7
+  Attendance  75.0%  ->  predicted Mid-sem 73.6
+  Attendance  90.0%  ->  predicted Mid-sem 84.5
+  Attendance 100.0%  ->  predicted Mid-sem 91.8
+
+--- Quiz = a + b * Attendance ---
+Quiz = 36.8184 + 0.2917 * Attendance
+R-squared = 0.1543
+Each extra 1% of attendance is associated with +0.292 Quiz marks; attendance explains 15.4% of the variation.
+Predictions:
+  Attendance  50.0%  ->  predicted Quiz 51.4
+  Attendance  60.0%  ->  predicted Quiz 54.3
+  Attendance  75.0%  ->  predicted Quiz 58.7
+  Attendance  90.0%  ->  predicted Quiz 63.1
+  Attendance 100.0%  ->  predicted Quiz 66.0
+
+=== GROUP COMPARISON (cut-off 75% attendance, marks: Mid-sem + Quiz (both)) ===
+--- Mid-sem marks ---
+Group                         Count  Avg marks  Std dev
+Attendance >= cut-off            35      83.75     9.16
+Attendance <  cut-off            25      63.81    11.24
+Difference in means = 19.94 marks
+Welch t = 7.3030, df = 45.0, p-value = < 0.0001
+Interpretation: students with attendance >= 75% scored 19.94 marks higher on average; this difference IS statistically significant.
+
+--- Quiz marks ---
+Group                         Count  Avg marks  Std dev
+Attendance >= cut-off            35      62.59    11.24
+Attendance <  cut-off            25      55.02     9.32
+Difference in means = 7.58 marks
+Welch t = 2.8467, df = 56.6, p-value = 0.0061
+Interpretation: students with attendance >= 75% scored 7.58 marks higher on average; this difference IS statistically significant.
